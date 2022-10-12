@@ -1,0 +1,13 @@
+2022-10-12 12:47:42.921 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 60965 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-12 12:47:42.924 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :634  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2022-10-12 12:47:43.897 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
+2022-10-12 12:47:43.903 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2022-10-12 12:47:43.904 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-12 12:47:43.904 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-12 12:47:44.022 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-12 12:47:44.022 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :292  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1051 ms
+2022-10-12 12:47:44.397 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2022-10-12 12:47:44.413 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-12 12:47:44.425 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.952 seconds (JVM running for 2.682)
+2022-10-12 12:47:44.428 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :16   [32m                  [0;39m Successfully Run
+2022-10-12 12:47:44.429 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :17   [32m                  [0;39m Ip address: 	http://127.0.0.1:null
