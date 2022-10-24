@@ -1,64 +1,11 @@
-2022-10-17 11:10:26.705 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 86392 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
-2022-10-17 11:10:26.708 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
-2022-10-17 11:10:26.766 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-10-17 11:10:26.767 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-10-17 11:10:28.051 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
-2022-10-17 11:10:28.061 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:10:28.062 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
-2022-10-17 11:10:28.062 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
-2022-10-17 11:10:28.120 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
-2022-10-17 11:10:28.121 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1353 ms
-2022-10-17 11:10:28.791 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
-2022-10-17 11:10:29.087 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
-2022-10-17 11:10:29.115 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:10:29.135 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
-2022-10-17 11:10:29.153 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 2.909 seconds (JVM running for 3.566)
-2022-10-17 11:10:29.157 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
-2022-10-17 11:10:29.158 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
-2022-10-17 11:11:02.036 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-17 11:11:02.052 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
-2022-10-17 11:11:02.057 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 4 ms
-2022-10-17 11:11:02.149 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
-2022-10-17 11:11:02.681 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
-2022-10-17 11:21:45.456 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
-2022-10-17 11:21:45.459 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
-2022-10-17 11:21:45.479 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
-2022-10-17 11:21:45.719 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 86392 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
-2022-10-17 11:21:45.720 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
-2022-10-17 11:21:45.999 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
-2022-10-17 11:21:46.000 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:21:46.001 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
-2022-10-17 11:21:46.001 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
-2022-10-17 11:21:46.006 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
-2022-10-17 11:21:46.007 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 280 ms
-2022-10-17 11:21:46.232 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
-2022-10-17 11:21:46.303 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
-2022-10-17 11:21:46.322 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:21:46.328 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
-2022-10-17 11:21:46.338 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.726 seconds (JVM running for 680.748)
-2022-10-17 11:21:46.343 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
-2022-10-17 11:21:46.345 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
-2022-10-17 11:21:46.346 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
-2022-10-17 11:26:29.819 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
-2022-10-17 11:26:37.363 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 86619 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
-2022-10-17 11:26:37.365 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
-2022-10-17 11:26:37.420 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-10-17 11:26:37.421 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-10-17 11:26:38.659 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
-2022-10-17 11:26:38.669 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:26:38.670 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
-2022-10-17 11:26:38.670 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
-2022-10-17 11:26:38.716 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
-2022-10-17 11:26:38.717 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1295 ms
-2022-10-17 11:26:39.323 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
-2022-10-17 11:26:39.613 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
-2022-10-17 11:26:39.641 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
-2022-10-17 11:26:39.659 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
-2022-10-17 11:26:39.686 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 2.755 seconds (JVM running for 3.325)
-2022-10-17 11:26:39.690 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
-2022-10-17 11:26:39.691 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
-2022-10-17 11:26:49.304 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-17 11:26:49.308 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
-2022-10-17 11:26:49.313 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 4 ms
-2022-10-17 11:26:49.480 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
-2022-10-17 11:26:49.940 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-10-24 00:59:27.667 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h15m41s140ms).
+2022-10-24 01:27:58.001 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m30s335ms).
+2022-10-24 02:10:08.600 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m10s599ms).
+2022-10-24 03:05:25.917 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m17s316ms).
+2022-10-24 05:49:47.294 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h44m21s378ms).
+2022-10-24 08:33:04.526 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h43m17s230ms).
+2022-10-24 11:29:59.738 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h56m55s213ms).
+2022-10-24 12:16:32.486 WARN  com.zaxxer.hikari.pool.HikariPool                 :787  [32m                  [0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m32s749ms).
+2022-10-24 12:55:19.643 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 12:55:19.645 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-10-24 12:55:19.681 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
