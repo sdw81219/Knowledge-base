@@ -2510,3 +2510,357 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowle
 2022-10-29 21:33:33.063 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：2
 2022-10-29 21:33:33.064 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
 2022-10-29 21:33:33.064 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：970 ms -------------
+2022-10-29 21:35:44.352 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2022-10-29 21:35:44.383 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2022-10-29 21:35:44.707 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:35:44.711 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:35:44.978 WARN  org.mybatis.spring.mapper.ClassPathMapperScanner  :44   [32m                  [0;39m No MyBatis mapper was found in '[com.henry.knowledgebase.mapper]' package. Please check your configuration.
+2022-10-29 21:35:45.074 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:35:45.076 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:35:45.076 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:35:45.076 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:35:45.090 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:35:45.090 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 366 ms
+2022-10-29 21:35:45.269 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+2022-10-29 21:35:45.270 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-10-29 21:35:45.285 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-29 21:35:45.320 ERROR org.springframework.boot.SpringApplication        :819  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at com.henry.knowledgebase.config.KnowledgeBaseApplication.main(KnowledgeBaseApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:612)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:490)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:632)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$67d18008.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$67d18008$$FastClassBySpringCGLIB$$c352b4fc.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$67d18008.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/DemoMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610)
+	... 36 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:263)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119)
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.henry.knowledgebase.domain.Demo'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 42 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowledgebase.domain.Demo
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 44 common frames omitted
+2022-10-29 21:35:48.035 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:35:48.037 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:35:48.436 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:35:48.441 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:35:48.441 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:35:48.441 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:35:48.450 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:35:48.451 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 408 ms
+2022-10-29 21:35:48.953 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:35:48.967 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:35:48.970 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:35:48.976 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.006 seconds (JVM running for 674.256)
+2022-10-29 21:35:48.983 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:35:48.983 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:35:48.984 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:48:15.993 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:48:15.997 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:48:16.417 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:48:16.422 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:48:16.422 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:48:16.423 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:48:16.438 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:48:16.438 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 428 ms
+2022-10-29 21:48:16.877 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:48:16.887 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:48:16.892 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:48:16.896 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.047 seconds (JVM running for 1422.175)
+2022-10-29 21:48:16.897 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:48:16.898 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:48:16.898 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:48:39.882 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:48:39.885 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:48:40.184 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:48:40.187 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:48:40.187 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:48:40.187 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:48:40.193 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:48:40.193 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 300 ms
+2022-10-29 21:48:40.530 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:48:40.541 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:48:40.547 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:48:40.552 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.78 seconds (JVM running for 1445.831)
+2022-10-29 21:48:40.553 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:48:40.554 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:48:40.554 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:49:22.922 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:49:22.926 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:49:23.264 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:49:23.267 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:49:23.267 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:49:23.267 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:49:23.275 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:49:23.275 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 338 ms
+2022-10-29 21:49:23.755 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:49:23.763 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:49:23.769 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:49:23.773 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.973 seconds (JVM running for 1489.052)
+2022-10-29 21:49:23.775 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:49:23.776 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:49:23.776 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:49:25.449 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:49:25.452 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:49:25.703 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:49:25.706 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:49:25.706 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:49:25.706 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:49:25.712 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:49:25.712 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 252 ms
+2022-10-29 21:49:26.030 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:49:26.037 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:49:26.039 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:49:26.042 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.686 seconds (JVM running for 1491.321)
+2022-10-29 21:49:26.043 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:49:26.043 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:49:26.043 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:49:52.244 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-29 21:49:52.255 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-10-29 21:49:52.260 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 4 ms
+2022-10-29 21:49:52.318 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:49:52.319 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-10-29 21:49:52.319 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:49:52.319 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:49:52.324 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1001}]
+2022-10-29 21:49:52.340 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2022-10-29 21:49:58.011 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2022-10-29 21:49:58.029 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:49:58.033 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:49:58.362 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:49:58.364 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:49:58.372 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:49:58.380 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:49:58.381 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1001(Integer)
+2022-10-29 21:49:58.689 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:49:58.694 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:49:58.698 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:49:58.700 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:49:58.704 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:49:58.705 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:49:58.707 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:49:58.710 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:49:58.711 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:49:58.740 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:49:58.740 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：6422 ms -------------
+2022-10-29 21:49:58.767 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:49:58.768 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-10-29 21:49:58.769 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:49:58.769 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:49:58.769 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1001}]
+2022-10-29 21:49:58.784 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:49:58.784 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:49:59.088 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:49:59.092 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:49:59.095 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:49:59.099 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:49:59.104 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1001(Integer)
+2022-10-29 21:49:59.405 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:49:59.410 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:49:59.423 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:49:59.428 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:49:59.429 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:49:59.430 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:49:59.432 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:49:59.446 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:49:59.447 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:49:59.450 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:49:59.451 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：684 ms -------------
+2022-10-29 21:50:33.405 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2022-10-29 21:50:33.417 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2022-10-29 21:50:33.726 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18639 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:50:33.731 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:50:34.060 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:50:34.064 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:50:34.064 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:50:34.064 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:50:34.073 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:50:34.073 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 334 ms
+2022-10-29 21:50:34.453 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:50:34.462 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:50:34.464 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:50:34.467 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.875 seconds (JVM running for 1559.746)
+2022-10-29 21:50:34.468 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-10-29 21:50:34.469 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:50:34.469 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:50:35.838 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-29 21:50:35.841 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-10-29 21:50:35.842 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 0 ms
+2022-10-29 21:50:35.863 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:50:35.864 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://localhost:8880/ebook/list GET
+2022-10-29 21:50:35.864 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:50:35.864 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:50:35.866 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1001}]
+2022-10-29 21:50:35.892 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-3 - Starting...
+2022-10-29 21:50:39.770 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-3 - Start completed.
+2022-10-29 21:50:39.777 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:50:39.779 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:50:40.042 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:50:40.045 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:50:40.049 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:50:40.052 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:50:40.053 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1001(Integer)
+2022-10-29 21:50:40.316 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:50:40.319 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:50:40.322 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:50:40.323 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:50:40.324 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:50:40.325 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:50:40.326 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:50:40.328 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:50:40.330 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:50:40.355 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:50:40.356 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：4494 ms -------------
+2022-10-29 21:50:53.635 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:50:53.636 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://localhost:8880/ebook/list GET
+2022-10-29 21:50:53.636 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:50:53.636 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:50:53.636 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1001}]
+2022-10-29 21:50:53.906 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:50:53.909 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:50:54.174 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:50:54.175 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:50:54.178 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:50:54.182 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:50:54.183 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1001(Integer)
+2022-10-29 21:50:54.443 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:50:54.444 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:50:54.448 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:50:54.449 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:50:54.450 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:50:54.451 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:50:54.452 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:50:54.454 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:50:54.455 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:50:54.462 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:50:54.463 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：828 ms -------------
+2022-10-29 21:52:35.916 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2022-10-29 21:52:35.931 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2022-10-29 21:52:45.643 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 18993 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-10-29 21:52:45.645 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-10-29 21:52:45.646 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-10-29 21:52:45.698 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-29 21:52:45.699 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-29 21:52:47.280 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-10-29 21:52:47.287 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:52:47.288 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-10-29 21:52:47.288 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-10-29 21:52:47.398 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-10-29 21:52:47.398 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1699 ms
+2022-10-29 21:52:48.558 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-10-29 21:52:48.588 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-10-29 21:52:48.605 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-10-29 21:52:48.621 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 3.45 seconds (JVM running for 4.076)
+2022-10-29 21:52:48.625 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-10-29 21:52:48.626 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-10-29 21:52:51.660 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-29 21:52:51.665 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-10-29 21:52:51.668 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 3 ms
+2022-10-29 21:52:51.787 WARN  c.h.k.controller.ControllerExceptionHandler       :28   [32m                  [0;39m 参数校验失败：【每页条数】不能超过1000
+2022-10-29 21:52:51.837 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'ebookQueryReq' on field 'size': rejected value [1001]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],1000]; default message [【每页条数】不能超过1000]]
+2022-10-29 21:53:10.132 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:53:10.134 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-10-29 21:53:10.134 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:53:10.135 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:53:10.180 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1000}]
+2022-10-29 21:53:10.313 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-10-29 21:53:11.480 WARN  c.h.k.controller.ControllerExceptionHandler       :28   [32m                  [0;39m 参数校验失败：【每页条数】不能超过1000
+2022-10-29 21:53:11.485 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'ebookQueryReq' on field 'size': rejected value [1001]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],1000]; default message [【每页条数】不能超过1000]]
+2022-10-29 21:53:13.739 WARN  c.h.k.controller.ControllerExceptionHandler       :28   [32m                  [0;39m 参数校验失败：【每页条数】不能超过1000
+2022-10-29 21:53:13.744 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<LF>Field error in object 'ebookQueryReq' on field 'size': rejected value [1001]; codes [Max.ebookQueryReq.size,Max.size,Max.int,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookQueryReq.size,size]; arguments []; default message [size],1000]; default message [【每页条数】不能超过1000]]
+2022-10-29 21:53:14.584 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-10-29 21:53:14.624 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:53:14.654 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:53:14.962 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:53:14.963 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:53:14.967 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:53:14.973 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:53:14.974 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1000(Integer)
+2022-10-29 21:53:15.249 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:53:15.252 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:53:15.255 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:53:15.257 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:53:15.259 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:53:15.261 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:53:15.266 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:53:15.276 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:53:15.276 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:53:15.314 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:53:15.314 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：5183 ms -------------
+2022-10-29 21:53:15.333 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-10-29 21:53:15.333 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-10-29 21:53:15.334 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-10-29 21:53:15.334 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-10-29 21:53:15.334 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1000}]
+2022-10-29 21:53:15.337 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-10-29 21:53:15.337 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-10-29 21:53:15.605 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-10-29 21:53:15.608 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-10-29 21:53:15.613 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-10-29 21:53:15.616 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-10-29 21:53:15.619 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1000(Integer)
+2022-10-29 21:53:15.894 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-10-29 21:53:15.897 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, springboot入门啊哈哈, 200, 201, SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。, <<BLOB>>, 6, 51951, 227
+2022-10-29 21:53:15.902 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, mybatis入门, 200, 201, MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。, <<BLOB>>, 2, 521, 9
+2022-10-29 21:53:15.904 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215407481327849472, 而, 200, 201, 儿童, <<BLOB>>, 1, 1, 0
+2022-10-29 21:53:15.906 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408305814769664, 谈, 200, 201, 特网, <<BLOB>>, 0, 0, 0
+2022-10-29 21:53:15.910 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 215408350031122432, 为我, 200, 201, 为  , <<BLOB>>, 0, 0, 0
+2022-10-29 21:53:15.912 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-10-29 21:53:15.916 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-10-29 21:53:15.917 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-10-29 21:53:15.923 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"SpringBoot基于Spring4.0设计，不仅继承了Spring框架原有的优秀特性，而且还通过简化配置来进一步简化了Spring应用的整个搭建和开发过程。","docCount":6,"id":1,"name":"springboot入门啊哈哈","viewCount":51951,"voteCount":227},{"category1Id":200,"category2Id":201,"description":"MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。","docCount":2,"id":2,"name":"mybatis入门","viewCount":521,"voteCount":9},{"category1Id":200,"category2Id":201,"cover":"让他","description":"儿童","docCount":1,"id":215407481327849472,"name":"而","viewCount":1,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"特网","docCount":0,"id":215408305814769664,"name":"谈","viewCount":0,"voteCount":0},{"category1Id":200,"category2Id":201,"cover":"/image/cover2.png","description":"为  ","docCount":0,"id":215408350031122432,"name":"为我","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-10-29 21:53:15.923 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：590 ms -------------
