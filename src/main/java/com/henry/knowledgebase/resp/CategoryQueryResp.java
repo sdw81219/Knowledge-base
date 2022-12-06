@@ -1,6 +1,6 @@
-package com.henry.knowledgebase.domain;
+package com.henry.knowledgebase.resp;
 
-public class Category {
+public class CategoryQueryResp {
     private Long id;
 
     private Long parent;
