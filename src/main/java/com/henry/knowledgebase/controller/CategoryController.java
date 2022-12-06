@@ -1,5 +1,5 @@
 package com.henry.knowledgebase.controller;
-
+import java.util.List;
 import com.henry.knowledgebase.req.CategoryQueryReq;
 import com.henry.knowledgebase.req.CategorySaveReq;
 import com.henry.knowledgebase.resp.CommonResp;
@@ -17,6 +17,14 @@ public class CategoryController {
 
     @Resource
     private CategoryService categoryService;
+
+    @GetMapping("/all")
+    public CommonResp all() {
+        CommonResp<List<CategoryQueryResp>> resp = new CommonResp<>();
+        List<CategoryQueryResp> list = categoryService.all();
+        resp.setContent(list);
+        return resp;
+    }
 
     @GetMapping("/list")
     public CommonResp list(@Valid CategoryQueryReq req) {
