@@ -648,3 +648,394 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.henry.knowle
 2022-12-06 18:07:13.299 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 15
 2022-12-06 18:07:13.300 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
 2022-12-06 18:07:13.301 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：41 ms -------------
+2022-12-06 21:01:18.048 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:01:18.055 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-12-06 21:01:18.056 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-12-06 21:01:18.056 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:01:18.058 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1000}]
+2022-12-06 21:01:18.070 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-12-06 21:01:18.073 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:01:18.079 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-12-06 21:01:18.080 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-12-06 21:01:18.081 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-12-06 21:01:18.083 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-12-06 21:01:18.084 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1000(Integer)
+2022-12-06 21:01:18.085 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-12-06 21:01:18.086 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover1.png, 0, 0, 0
+2022-12-06 21:01:18.088 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2022-12-06 21:01:18.088 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:01:18.088 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:01:18.088 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:01:18.089 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-12-06 21:01:18.089 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-12-06 21:01:18.089 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-12-06 21:01:18.092 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-12-06 21:01:18.093 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：45 ms -------------
+2022-12-06 21:01:19.348 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:01:19.350 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:01:19.351 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:01:19.351 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:01:19.351 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:01:19.357 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:01:19.358 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:01:19.361 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:01:19.362 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:01:19.363 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:01:19.364 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:01:19.364 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:01:19.364 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:01:19.364 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:01:19.365 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:01:19.366 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:01:19.366 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:01:19.366 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 15
+2022-12-06 21:01:19.368 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:01:19.368 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：21 ms -------------
+2022-12-06 21:01:34.729 WARN  c.h.k.controller.ControllerExceptionHandler       :28   [32m                  [0;39m 参数校验失败：【排序】不能为空
+2022-12-06 21:01:34.733 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :208  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.henry.knowledgebase.resp.CommonResp com.henry.knowledgebase.controller.CategoryController.save(com.henry.knowledgebase.req.CategorySaveReq): [Field error in object 'categorySaveReq' on field 'sort': rejected value [null]; codes [NotNull.categorySaveReq.sort,NotNull.sort,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [categorySaveReq.sort,sort]; arguments []; default message [sort]]; default message [【排序】不能为空]] ]
+2022-12-06 21:01:44.654 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:01:44.655 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/save POST
+2022-12-06 21:01:44.656 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.save
+2022-12-06 21:01:44.656 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:01:44.665 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"name":"test1","sort":600}]
+2022-12-06 21:01:44.674 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==>  Preparing: insert into category (id, parent, `name`, sort) values (?, ?, ?, ?)
+2022-12-06 21:01:44.676 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==> Parameters: 255514083254734848(Long), null, test1(String), 600(Integer)
+2022-12-06 21:01:44.774 ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet]   :175  [32m                  [0;39m Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'parent' cannot be null
+### The error may exist in file [/Users/henry/Desktop/Knowledge-base/target/classes/mapper/CategoryMapper.xml]
+### The error may involve com.henry.knowledgebase.mapper.CategoryMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: insert into category (id, parent, `name`,        sort)     values (?, ?, ?,        ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Column 'parent' cannot be null
+; Column 'parent' cannot be null; nested exception is java.sql.SQLIntegrityConstraintViolationException: Column 'parent' cannot be null] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Column 'parent' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor68.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy105.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy103.update(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy78.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy168.insert(Unknown Source)
+	at com.henry.knowledgebase.service.CategoryService.save(CategoryService.java:83)
+	at com.henry.knowledgebase.controller.CategoryController.save(CategoryController.java:40)
+	at com.henry.knowledgebase.controller.CategoryController$$FastClassBySpringCGLIB$$4a2f8a8a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.henry.knowledgebase.aspect.LogAspect.doAround(LogAspect.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698)
+	at com.henry.knowledgebase.controller.CategoryController$$EnhancerBySpringCGLIB$$fd669211.save(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2022-12-06 21:03:03.453 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:03.455 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:03:03.455 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:03:03.455 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:03.456 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:03:03.473 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:03:03.476 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:03:03.480 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:03:03.481 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:03:03.483 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:03:03.483 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:03:03.483 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:03:03.483 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:03:03.484 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:03:03.484 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:03:03.484 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:03:03.484 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:03:03.484 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:03:03.485 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:03:03.485 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:03:03.485 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:03:03.485 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:03:03.485 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:03:03.486 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 15
+2022-12-06 21:03:03.489 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:03:03.489 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：37 ms -------------
+2022-12-06 21:03:16.604 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2022-12-06 21:03:16.629 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2022-12-06 21:03:23.643 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 6.2.0.Final
+2022-12-06 21:03:23.648 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahhahasPro.cable.rcn.com with PID 19758 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-12-06 21:03:23.648 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-12-06 21:03:23.696 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-06 21:03:23.697 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-06 21:03:25.302 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-12-06 21:03:25.312 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-12-06 21:03:25.312 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-12-06 21:03:25.313 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-12-06 21:03:25.439 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-12-06 21:03:25.439 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1742 ms
+2022-12-06 21:03:26.669 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-12-06 21:03:26.696 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-12-06 21:03:26.718 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-12-06 21:03:26.733 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 3.508 seconds (JVM running for 5.186)
+2022-12-06 21:03:26.737 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-12-06 21:03:26.738 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-12-06 21:03:36.289 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-06 21:03:36.290 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2022-12-06 21:03:36.297 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 2 ms
+2022-12-06 21:03:36.448 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:36.449 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2022-12-06 21:03:36.449 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.EbookController.list
+2022-12-06 21:03:36.449 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:36.513 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"page":1,"size":1000}]
+2022-12-06 21:03:36.604 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2022-12-06 21:03:36.967 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2022-12-06 21:03:36.973 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2022-12-06 21:03:36.987 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:03:37.023 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==    Columns: count(0)
+2022-12-06 21:03:37.024 TRACE c.h.k.mapper.EbookMapper.selectByExample_COUNT    :143  [32m                  [0;39m <==        Row: 5
+2022-12-06 21:03:37.025 DEBUG c.h.k.mapper.EbookMapper.selectByExample_COUNT    :137  [32m                  [0;39m <==      Total: 1
+2022-12-06 21:03:37.030 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2022-12-06 21:03:37.031 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m ==> Parameters: 1000(Integer)
+2022-12-06 21:03:37.032 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2022-12-06 21:03:37.033 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover1.png, 0, 0, 0
+2022-12-06 21:03:37.033 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2022-12-06 21:03:37.034 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:03:37.035 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:03:37.037 TRACE c.h.k.mapper.EbookMapper.selectByExample          :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2022-12-06 21:03:37.039 DEBUG c.h.k.mapper.EbookMapper.selectByExample          :137  [32m                  [0;39m <==      Total: 5
+2022-12-06 21:03:37.041 INFO  com.henry.knowledgebase.service.EbookService      :43   [32m                  [0;39m 总行数：5
+2022-12-06 21:03:37.042 INFO  com.henry.knowledgebase.service.EbookService      :44   [32m                  [0;39m 总页数：1
+2022-12-06 21:03:37.065 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover1.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2022-12-06 21:03:37.067 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：620 ms -------------
+2022-12-06 21:03:37.170 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:37.171 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:03:37.171 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:03:37.172 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:37.172 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:03:37.192 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:03:37.193 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:03:37.202 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:03:37.203 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:03:37.205 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:03:37.206 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:03:37.206 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:03:37.206 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:03:37.207 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:03:37.207 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:03:37.208 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:03:37.208 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:03:37.209 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:03:37.209 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:03:37.209 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:03:37.210 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:03:37.210 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:03:37.210 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:03:37.211 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 15
+2022-12-06 21:03:37.243 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:03:37.244 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：74 ms -------------
+2022-12-06 21:03:42.591 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:42.593 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/save POST
+2022-12-06 21:03:42.593 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.save
+2022-12-06 21:03:42.593 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:42.597 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"name":"test1","parent":0,"sort":1}]
+2022-12-06 21:03:42.609 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==>  Preparing: insert into category (id, parent, `name`, sort) values (?, ?, ?, ?)
+2022-12-06 21:03:42.612 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==> Parameters: 255514577918365696(Long), 0(Long), test1(String), 1(Integer)
+2022-12-06 21:03:42.619 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m <==    Updates: 1
+2022-12-06 21:03:42.621 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-06 21:03:42.621 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：30 ms -------------
+2022-12-06 21:03:42.657 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:42.658 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:03:42.659 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:03:42.659 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:42.659 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:03:42.662 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:03:42.663 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:03:42.667 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:03:42.668 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 255514577918365696, 0, test1, 1
+2022-12-06 21:03:42.674 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:03:42.675 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:03:42.676 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:03:42.676 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:03:42.676 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:03:42.677 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:03:42.677 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:03:42.677 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:03:42.678 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:03:42.678 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:03:42.678 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:03:42.679 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:03:42.679 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:03:42.679 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:03:42.679 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:03:42.680 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 16
+2022-12-06 21:03:42.684 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":255514577918365696,"name":"test1","parent":0,"sort":1},{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:03:42.684 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：27 ms -------------
+2022-12-06 21:03:58.662 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:58.667 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/save POST
+2022-12-06 21:03:58.668 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.save
+2022-12-06 21:03:58.668 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:58.669 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"name":"test2","parent":255514577918365696,"sort":100}]
+2022-12-06 21:03:58.672 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==>  Preparing: insert into category (id, parent, `name`, sort) values (?, ?, ?, ?)
+2022-12-06 21:03:58.675 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m ==> Parameters: 255514645291470848(Long), 255514577918365696(Long), test2(String), 100(Integer)
+2022-12-06 21:03:58.678 DEBUG c.henry.knowledgebase.mapper.CategoryMapper.insert:137  [32m                  [0;39m <==    Updates: 1
+2022-12-06 21:03:58.679 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-06 21:03:58.680 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：18 ms -------------
+2022-12-06 21:03:58.726 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:03:58.727 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:03:58.730 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:03:58.731 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:03:58.731 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:03:58.731 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:03:58.732 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:03:58.733 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:03:58.735 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 255514577918365696, 0, test1, 1
+2022-12-06 21:03:58.736 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:03:58.737 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 255514645291470848, 255514577918365696, test2, 100
+2022-12-06 21:03:58.738 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:03:58.738 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:03:58.739 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:03:58.739 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:03:58.741 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:03:58.741 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:03:58.743 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:03:58.745 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:03:58.745 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:03:58.745 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:03:58.746 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:03:58.748 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:03:58.749 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:03:58.749 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:03:58.750 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 17
+2022-12-06 21:03:58.752 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":255514577918365696,"name":"test1","parent":0,"sort":1},{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":255514645291470848,"name":"test2","parent":255514577918365696,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:03:58.752 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：26 ms -------------
+2022-12-06 21:04:13.970 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:04:13.972 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/save POST
+2022-12-06 21:04:13.972 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.save
+2022-12-06 21:04:13.972 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:04:13.975 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"id":255514645291470848,"name":"test2","parent":300,"sort":100}]
+2022-12-06 21:04:13.982 DEBUG c.h.k.mapper.CategoryMapper.updateByPrimaryKey    :137  [32m                  [0;39m ==>  Preparing: update category set parent = ?, `name` = ?, sort = ? where id = ?
+2022-12-06 21:04:13.983 DEBUG c.h.k.mapper.CategoryMapper.updateByPrimaryKey    :137  [32m                  [0;39m ==> Parameters: 300(Long), test2(String), 100(Integer), 255514645291470848(Long)
+2022-12-06 21:04:13.986 DEBUG c.h.k.mapper.CategoryMapper.updateByPrimaryKey    :137  [32m                  [0;39m <==    Updates: 1
+2022-12-06 21:04:13.987 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-06 21:04:13.987 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：17 ms -------------
+2022-12-06 21:04:14.026 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-06 21:04:14.026 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/category/all GET
+2022-12-06 21:04:14.026 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.CategoryController.all
+2022-12-06 21:04:14.026 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-06 21:04:14.027 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-06 21:04:14.030 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2022-12-06 21:04:14.031 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m ==> Parameters: 
+2022-12-06 21:04:14.035 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2022-12-06 21:04:14.035 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 255514577918365696, 0, test1, 1
+2022-12-06 21:04:14.036 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2022-12-06 21:04:14.036 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 255514645291470848, 300, test2, 100
+2022-12-06 21:04:14.036 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2022-12-06 21:04:14.037 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2022-12-06 21:04:14.037 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2022-12-06 21:04:14.038 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2022-12-06 21:04:14.039 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2022-12-06 21:04:14.040 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 300, 0, Python, 300
+2022-12-06 21:04:14.042 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 301, 300, 基础应用, 301
+2022-12-06 21:04:14.042 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 302, 300, 进阶方向应用, 302
+2022-12-06 21:04:14.042 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2022-12-06 21:04:14.043 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2022-12-06 21:04:14.043 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 500, 0, 其它, 500
+2022-12-06 21:04:14.043 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 501, 500, 服务器, 501
+2022-12-06 21:04:14.043 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 502, 500, 开发工具, 502
+2022-12-06 21:04:14.043 TRACE c.h.k.mapper.CategoryMapper.selectByExample       :143  [32m                  [0;39m <==        Row: 503, 500, 热门服务端语言, 503
+2022-12-06 21:04:14.044 DEBUG c.h.k.mapper.CategoryMapper.selectByExample       :137  [32m                  [0;39m <==      Total: 17
+2022-12-06 21:04:14.046 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"id":255514577918365696,"name":"test1","parent":0,"sort":1},{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":255514645291470848,"name":"test2","parent":300,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"Python","parent":0,"sort":300},{"id":301,"name":"基础应用","parent":300,"sort":301},{"id":302,"name":"进阶方向应用","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":500,"name":"其它","parent":0,"sort":500},{"id":501,"name":"服务器","parent":500,"sort":501},{"id":502,"name":"开发工具","parent":500,"sort":502},{"id":503,"name":"热门服务端语言","parent":500,"sort":503}],"success":true}
+2022-12-06 21:04:14.046 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：21 ms -------------
