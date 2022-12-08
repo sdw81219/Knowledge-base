@@ -167,3 +167,416 @@
 2022-12-08 00:13:40.596 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
 2022-12-08 00:13:40.597 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
 2022-12-08 00:13:40.597 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：6 ms -------------
+2022-12-08 00:13:55.125 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:13:55.126 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:13:55.126 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:13:55.126 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:13:55.126 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:13:55.129 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:13:55.130 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:13:55.132 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:13:55.132 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:13:55.132 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:13:55.133 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:13:55.133 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:13:55.133 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:13:55.133 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:13:55.133 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:13:55.134 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:13:55.134 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2022-12-08 00:13:56.001 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:13:56.001 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:13:56.002 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:13:56.002 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:13:56.002 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:13:56.002 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:13:56.003 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:13:56.004 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:13:56.005 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:13:56.005 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:13:56.005 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:13:56.005 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:13:56.005 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:13:56.006 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:13:56.006 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:13:56.006 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:13:56.006 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-12-08 00:13:56.866 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:13:56.866 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:13:56.866 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:13:56.866 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:13:56.867 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:13:56.868 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:13:56.868 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:13:56.869 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:13:56.869 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:13:56.870 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:13:56.870 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:13:56.870 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:13:56.870 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:13:56.870 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:13:56.871 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:13:56.871 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:13:56.871 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：5 ms -------------
+2022-12-08 00:18:19.016 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:18:19.017 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:18:19.017 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:18:19.018 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:18:19.018 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:18:19.019 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:18:19.020 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:18:19.021 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:18:19.022 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:18:19.023 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:18:19.023 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:18:19.024 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:18:19.025 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:18:19.025 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:18:19.026 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:18:19.028 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:18:19.028 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：12 ms -------------
+2022-12-08 00:21:50.087 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:21:50.089 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:21:50.089 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:21:50.089 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:21:50.090 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:21:50.093 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:21:50.094 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:21:50.095 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:21:50.096 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:21:50.096 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:21:50.096 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:21:50.096 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:21:50.096 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:21:50.097 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:21:50.097 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:21:50.098 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:21:50.098 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2022-12-08 00:22:03.523 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:22:03.527 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:22:03.529 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:22:03.529 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:22:03.530 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:22:03.537 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:22:03.538 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:22:03.540 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:22:03.540 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:22:03.542 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:22:03.543 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:22:03.543 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:22:03.543 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:22:03.544 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:22:03.544 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 6
+2022-12-08 00:22:03.548 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:22:03.548 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：25 ms -------------
+2022-12-08 00:23:51.959 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:51.962 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/save POST
+2022-12-08 00:23:51.963 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.save
+2022-12-08 00:23:51.963 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:51.967 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"ebookId":1,"name":"test3","parent":0,"sort":1}]
+2022-12-08 00:23:51.980 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==>  Preparing: insert into doc (id, ebook_id, parent, `name`, sort, view_count, vote_count) values (?, ?, ?, ?, ?, ?, ?)
+2022-12-08 00:23:51.984 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==> Parameters: 255927336732594176(Long), 1(Long), 0(Long), test3(String), 1(Integer), null, null
+2022-12-08 00:23:51.989 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m <==    Updates: 1
+2022-12-08 00:23:51.990 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-08 00:23:51.990 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：31 ms -------------
+2022-12-08 00:23:52.007 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:52.009 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:23:52.009 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:23:52.009 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:52.009 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:23:52.010 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:23:52.010 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:23:52.014 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:23:52.015 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:23:52.017 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:23:52.017 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:23:52.018 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:23:52.018 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927336732594176, 1, 0, test3, 1, null, null
+2022-12-08 00:23:52.018 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:23:52.018 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:23:52.018 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 7
+2022-12-08 00:23:52.021 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927336732594176,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:23:52.022 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：16 ms -------------
+2022-12-08 00:23:53.468 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:53.468 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/save POST
+2022-12-08 00:23:53.469 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.save
+2022-12-08 00:23:53.469 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:53.471 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"ebookId":1,"name":"test3","parent":0,"sort":1}]
+2022-12-08 00:23:53.478 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==>  Preparing: insert into doc (id, ebook_id, parent, `name`, sort, view_count, vote_count) values (?, ?, ?, ?, ?, ?, ?)
+2022-12-08 00:23:53.484 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==> Parameters: 255927343003078656(Long), 1(Long), 0(Long), test3(String), 1(Integer), null, null
+2022-12-08 00:23:53.488 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m <==    Updates: 1
+2022-12-08 00:23:53.489 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-08 00:23:53.489 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：22 ms -------------
+2022-12-08 00:23:53.499 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:53.500 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:23:53.500 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:23:53.500 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:53.501 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:23:53.502 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:23:53.502 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:23:53.505 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:23:53.505 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:23:53.507 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:23:53.507 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:23:53.507 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:23:53.508 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927336732594176, 1, 0, test3, 1, null, null
+2022-12-08 00:23:53.508 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927343003078656, 1, 0, test3, 1, null, null
+2022-12-08 00:23:53.508 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:23:53.508 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:23:53.509 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 8
+2022-12-08 00:23:53.510 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927336732594176,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":255927343003078656,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:23:53.510 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：11 ms -------------
+2022-12-08 00:23:54.267 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:54.269 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/save POST
+2022-12-08 00:23:54.269 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.save
+2022-12-08 00:23:54.270 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:54.271 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: [{"ebookId":1,"name":"test3","parent":0,"sort":1}]
+2022-12-08 00:23:54.278 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==>  Preparing: insert into doc (id, ebook_id, parent, `name`, sort, view_count, vote_count) values (?, ?, ?, ?, ?, ?, ?)
+2022-12-08 00:23:54.283 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m ==> Parameters: 255927346358521856(Long), 1(Long), 0(Long), test3(String), 1(Integer), null, null
+2022-12-08 00:23:54.290 DEBUG com.henry.knowledgebase.mapper.DocMapper.insert   :137  [32m                  [0;39m <==    Updates: 1
+2022-12-08 00:23:54.292 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-08 00:23:54.292 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：25 ms -------------
+2022-12-08 00:23:54.311 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:23:54.312 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:23:54.313 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:23:54.313 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:23:54.314 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:23:54.315 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:23:54.316 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:23:54.318 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:23:54.318 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:23:54.319 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:23:54.319 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:23:54.319 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:23:54.319 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927336732594176, 1, 0, test3, 1, null, null
+2022-12-08 00:23:54.320 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927343003078656, 1, 0, test3, 1, null, null
+2022-12-08 00:23:54.320 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927346358521856, 1, 0, test3, 1, null, null
+2022-12-08 00:23:54.321 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:23:54.321 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:23:54.321 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 9
+2022-12-08 00:23:54.323 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927336732594176,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":255927343003078656,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":255927346358521856,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:23:54.323 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：12 ms -------------
+2022-12-08 00:24:06.126 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:24:06.127 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/delete/255927336732594176 DELETE
+2022-12-08 00:24:06.127 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.delete
+2022-12-08 00:24:06.127 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:24:06.128 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: ["255927336732594176"]
+2022-12-08 00:24:06.148 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m ==>  Preparing: delete from doc WHERE ( id in ( ? ) )
+2022-12-08 00:24:06.149 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m ==> Parameters: 255927336732594176(String)
+2022-12-08 00:24:06.158 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m <==    Updates: 1
+2022-12-08 00:24:06.159 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-08 00:24:06.159 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：33 ms -------------
+2022-12-08 00:24:06.176 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:24:06.176 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:24:06.176 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:24:06.177 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:24:06.177 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:24:06.179 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:24:06.179 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:24:06.180 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:24:06.181 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:24:06.181 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:24:06.181 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:24:06.182 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:24:06.182 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927343003078656, 1, 0, test3, 1, null, null
+2022-12-08 00:24:06.182 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927346358521856, 1, 0, test3, 1, null, null
+2022-12-08 00:24:06.182 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:24:06.183 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:24:06.183 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 8
+2022-12-08 00:24:06.186 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927343003078656,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":255927346358521856,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:24:06.186 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：10 ms -------------
+2022-12-08 00:24:09.003 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:24:09.003 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/delete/255927343003078656 DELETE
+2022-12-08 00:24:09.004 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.delete
+2022-12-08 00:24:09.004 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:24:09.004 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: ["255927343003078656"]
+2022-12-08 00:24:09.009 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m ==>  Preparing: delete from doc WHERE ( id in ( ? ) )
+2022-12-08 00:24:09.011 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m ==> Parameters: 255927343003078656(String)
+2022-12-08 00:24:09.014 DEBUG c.h.knowledgebase.mapper.DocMapper.deleteByExample:137  [32m                  [0;39m <==    Updates: 1
+2022-12-08 00:24:09.015 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"success":true}
+2022-12-08 00:24:09.017 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：14 ms -------------
+2022-12-08 00:24:09.028 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:24:09.030 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:24:09.031 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:24:09.031 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:24:09.031 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:24:09.034 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:24:09.035 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:24:09.038 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:24:09.039 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:24:09.040 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:24:09.040 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:24:09.041 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:24:09.041 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927346358521856, 1, 0, test3, 1, null, null
+2022-12-08 00:24:09.042 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:24:09.043 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:24:09.043 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 7
+2022-12-08 00:24:09.044 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927346358521856,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:24:09.045 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：17 ms -------------
+2022-12-08 00:41:42.585 INFO  com.henry.knowledgebase.aspect.LogAspect          :40   [32m                  [0;39m ------------- 开始 -------------
+2022-12-08 00:41:42.596 INFO  com.henry.knowledgebase.aspect.LogAspect          :41   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/doc/all GET
+2022-12-08 00:41:42.596 INFO  com.henry.knowledgebase.aspect.LogAspect          :42   [32m                  [0;39m 类名方法: com.henry.knowledgebase.controller.DocController.all
+2022-12-08 00:41:42.597 INFO  com.henry.knowledgebase.aspect.LogAspect          :43   [32m                  [0;39m 远程地址: 127.0.0.1
+2022-12-08 00:41:42.598 INFO  com.henry.knowledgebase.aspect.LogAspect          :63   [32m                  [0;39m 请求参数: []
+2022-12-08 00:41:42.612 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc order by sort asc
+2022-12-08 00:41:42.614 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m ==> Parameters: 
+2022-12-08 00:41:42.617 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2022-12-08 00:41:42.617 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 1, 1, 0, 文档1, 1, 0, 0
+2022-12-08 00:41:42.618 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 0, 0
+2022-12-08 00:41:42.619 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 0, 0
+2022-12-08 00:41:42.619 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 6, 1, 5, 文档2.2.1, 1, 0, 0
+2022-12-08 00:41:42.619 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 255927346358521856, 1, 0, test3, 1, null, null
+2022-12-08 00:41:42.619 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 3, 1, 0, 文档2, 2, 0, 0
+2022-12-08 00:41:42.620 TRACE c.h.knowledgebase.mapper.DocMapper.selectByExample:143  [32m                  [0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 0, 0
+2022-12-08 00:41:42.620 DEBUG c.h.knowledgebase.mapper.DocMapper.selectByExample:137  [32m                  [0;39m <==      Total: 7
+2022-12-08 00:41:42.624 INFO  com.henry.knowledgebase.aspect.LogAspect          :75   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":6,"name":"文档2.2.1","parent":5,"sort":1,"viewCount":0,"voteCount":0},{"ebookId":1,"id":255927346358521856,"name":"test3","parent":0,"sort":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":0,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":0,"voteCount":0}],"success":true}
+2022-12-08 00:41:42.624 INFO  com.henry.knowledgebase.aspect.LogAspect          :76   [32m                  [0;39m ------------- 结束 耗时：39 ms -------------
+2022-12-08 00:42:06.048 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-6 - Shutdown initiated...
+2022-12-08 00:42:06.076 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-6 - Shutdown completed.
+2022-12-08 00:42:06.624 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahahahas-Mac-Pro.local with PID 19758 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-12-08 00:42:06.628 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-12-08 00:42:06.977 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-12-08 00:42:06.981 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:42:06.982 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-12-08 00:42:06.982 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-12-08 00:42:06.989 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-12-08 00:42:06.990 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 352 ms
+2022-12-08 00:42:07.167 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'docController' defined in file [/Users/henry/Desktop/Knowledge-base/target/classes/com/henry/knowledgebase/controller/DocController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cff8e69]
+2022-12-08 00:42:07.169 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-12-08 00:42:07.178 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-08 00:42:07.181 ERROR org.springframework.boot.SpringApplication        :819  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'docController' defined in file [/Users/henry/Desktop/Knowledge-base/target/classes/com/henry/knowledgebase/controller/DocController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cff8e69]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at com.henry.knowledgebase.config.KnowledgeBaseApplication.main(KnowledgeBaseApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cff8e69]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:739)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:671)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:377)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:358)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/henry/knowledgebase/service/DocService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.henry.knowledgebase.service.DocService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 28 common frames omitted
+2022-12-08 00:42:26.929 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahahahas-Mac-Pro.local with PID 19758 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-12-08 00:42:26.930 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-12-08 00:42:27.275 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-12-08 00:42:27.281 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:42:27.281 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-12-08 00:42:27.281 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-12-08 00:42:27.287 INFO  o.a.c.c.ContainerBase.[Tomcat-5].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-12-08 00:42:27.287 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 354 ms
+2022-12-08 00:42:27.414 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:591  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'docController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49159cbd]
+2022-12-08 00:42:27.415 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2022-12-08 00:42:27.423 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-12-08 00:42:27.425 ERROR org.springframework.boot.SpringApplication        :819  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'docController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49159cbd]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at com.henry.knowledgebase.config.KnowledgeBaseApplication.main(KnowledgeBaseApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.henry.knowledgebase.controller.DocController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@49159cbd]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 21 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/henry/knowledgebase/req/DocSaveReq
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.henry.knowledgebase.req.DocSaveReq
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 27 common frames omitted
+2022-12-08 00:42:38.054 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahahahas-Mac-Pro.local with PID 19758 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-12-08 00:42:38.054 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-12-08 00:42:38.233 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-12-08 00:42:38.234 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:42:38.234 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-12-08 00:42:38.234 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-12-08 00:42:38.238 INFO  o.a.c.c.ContainerBase.[Tomcat-6].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-12-08 00:42:38.238 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 180 ms
+2022-12-08 00:42:38.671 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-12-08 00:42:38.686 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:42:38.689 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-12-08 00:42:38.694 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 0.676 seconds (JVM running for 40978.582)
+2022-12-08 00:42:38.695 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-12-08 00:42:38.695 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-12-08 00:42:38.696 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
+2022-12-08 00:50:50.931 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :55   [32m                  [0;39m Starting KnowledgeBaseApplication using Java 1.8.0_281 on hahahahahahas-Mac-Pro.local with PID 19758 (/Users/henry/Desktop/Knowledge-base/target/classes started by henry in /Users/henry/Desktop/Knowledge-base)
+2022-12-08 00:50:50.936 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :635  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2022-12-08 00:50:51.288 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2022-12-08 00:50:51.292 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:50:51.293 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2022-12-08 00:50:51.293 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-12-08 00:50:51.303 INFO  o.a.c.c.ContainerBase.[Tomcat-6].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2022-12-08 00:50:51.303 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :290  [32m                  [0;39m Root WebApplicationContext: initialization completed in 357 ms
+2022-12-08 00:50:51.755 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2022-12-08 00:50:51.769 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2022-12-08 00:50:51.772 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2022-12-08 00:50:51.780 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :61   [32m                  [0;39m Started KnowledgeBaseApplication in 1.126 seconds (JVM running for 41471.667)
+2022-12-08 00:50:51.781 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2022-12-08 00:50:51.781 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :20   [32m                  [0;39m Successfully Run
+2022-12-08 00:50:51.782 INFO  c.h.knowledgebase.config.KnowledgeBaseApplication :21   [32m                  [0;39m Ip address: 	http://127.0.0.1:8880
